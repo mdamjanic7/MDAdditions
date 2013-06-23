@@ -1,4 +1,4 @@
 MDAdditions
 ===========
 
-Various objective-c categories and improvements.
+Various Objective-C categories and improvements.
