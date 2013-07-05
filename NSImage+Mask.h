@@ -6,9 +6,10 @@
 //  Copyright (c) 2013 Misa Damjanic. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 
-@interface NSImage(Mask)
+@interface NSImage (Mask)
+
 /*!
  Creates and returns a new image by using the maskImage as the mask for the provided image.
  @param image
@@ -18,7 +19,7 @@
  @return
  A new image created by masking the original one. If any of the arguments isn't provided, image parameter will be returned.
  */
-+ (NSImage*)maskImage:(NSImage*)image usingMaskImage:(NSImage*)maskImage;
++ (NSImage *)maskImage:(NSImage *)image usingMaskImage:(NSImage *)maskImage;
 
 /*!
  Returns a new image by using the maskImage for masking the caller object.
@@ -27,6 +28,6 @@
  @return
  A new image created by masking the original one.
  */
-- (NSImage*)maskUsingMaskImage:(NSImage*)maskImage;
+- (NSImage *)maskUsingMaskImage:(NSImage *)maskImage;
 
 @end
