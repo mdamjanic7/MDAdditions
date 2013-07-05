@@ -34,12 +34,12 @@
 	unsigned char blueByte = (unsigned char)(colorCode);
 	
 	// Scale it to 0..1 range
-	CGFloat red = redByte / 0xff;
-	CGFloat green = greenByte / 0xff;
-	CGFloat blue = blueByte / 0xff;
+	CGFloat red = (CGFloat)redByte / 0xff;
+	CGFloat green = (CGFloat)greenByte / 0xff;
+	CGFloat blue = (CGFloat)blueByte / 0xff;
 	
 	// Return the newly created NSColor
-	return [NSColor colorWithCalibratedRed:red green:green blue:blue alpha:1.0];
+	return [NSColor colorWithCalibratedRed:red green:green blue:blue alpha:alpha];
 }
 
 @end
