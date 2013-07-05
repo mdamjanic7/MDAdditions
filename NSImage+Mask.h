@@ -16,7 +16,7 @@
  @param maskImage
  Image used for masking. Please note that the mask image cannot have alpha channels, so e.g. PNG files with transparent pixels won't work.
  @return
- A new image created by masking the original one.
+ A new image created by masking the original one. If any of the arguments isn't provided, image parameter will be returned.
  */
 + (NSImage*)maskImage:(NSImage*)image usingMaskImage:(NSImage*)maskImage;
 

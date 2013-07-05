@@ -12,6 +12,12 @@
 
 + (NSImage*)maskImage:(NSImage*)image usingMaskImage:(NSImage*)maskImage {
 	
+	// Make sure the arguments are provided; if not, simply return the original image.
+	// If the original image isn't provided, nil will be returned.
+	if (image == nil || maskImage == nil) {
+		return image;
+	}
+	
 	// Create a CGImage holding the mask image
 	CGImageSourceRef maskSourceRef = CGImageSourceCreateWithData((__bridge CFDataRef)[maskImage TIFFRepresentation], NULL);
     CGImageRef maskRef = CGImageSourceCreateImageAtIndex(maskSourceRef, 0, NULL);
